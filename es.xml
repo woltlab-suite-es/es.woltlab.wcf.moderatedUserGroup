@@ -24,7 +24,7 @@
 		<item name="wcf.user.userGroups.join"><![CDATA[Unirse al grupo de usuarios]]></item>
 		<item name="wcf.user.userGroups.leave"><![CDATA[Abandonar el grupo de usuarios]]></item>
 		<item name="wcf.user.userGroups.leave.sure"><![CDATA[¿Realmente quieres abandonar el grupo <span class="confirmationObject">{$group->getTitle()}</span>?]]></item>
-		<item name="wcf.user.userGroups.apply"><![CDATA[Solicitud de membresía]]></item>
+		<item name="wcf.user.userGroups.apply"><![CDATA[Solicitar unirse]]></item>
 		<item name="wcf.user.userGroups.apply.reason"><![CDATA[Motivo]]></item>
 		<item name="wcf.user.userGroups.apply.groupInformation"><![CDATA[Detalles del grupo de usuarios]]></item>
 		<item name="wcf.user.userGroups.apply.applicationInformation"><![CDATA[Detalles de la solicitud]]></item>
