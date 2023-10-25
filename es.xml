@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/language.xsd" languagecode="es" languagename="Español" countrycode="es">
+<import>
+	<category name="wcf.acp.group">
+		<item name="wcf.acp.group.groupType"><![CDATA[Tipo de grupo de usuarios]]></item>
+		<item name="wcf.acp.group.groupType.type4"><![CDATA[Cerrado]]></item>
+		<item name="wcf.acp.group.groupType.type5"><![CDATA[Libre para todos]]></item>
+		<item name="wcf.acp.group.groupType.type6"><![CDATA[Moderado]]></item>
+		<item name="wcf.acp.group.groupType.type7"><![CDATA[Cerrado moderado]]></item>
+		<item name="wcf.acp.group.groupType.description"><![CDATA[Selecciona el tipo de grupo de usuarios:
+<ul class="nativeList">
+	<li>Cerrado: Sólo los administradores pueden añadir miembros.</li>
+	<li>Abierto: Todos los usuarios pueden unirse o abandonarlo en cualquier momento.</li>
+	<li>Moderado: Los usuarios deben solicitar unirse, pero pueden salirse en cualquier momento.</li>
+	<li>Cerrado moderado: Los usuarios deben solicitar unirse, pero no pueden salirse en cualquier momento.</li>
+</ul>]]></item>
+		<item name="wcf.acp.group.leader"><![CDATA[Líder del grupo de usuarios]]></item>
+		<item name="wcf.acp.group.leader.description"><![CDATA[Los líderes pueden aprobar solicitudes y añadir usuarios a este grupo de usuarios. Separa múltiples usuarios con una coma.]]></item>
+		<item name="wcf.acp.group.leader.error.empty"><![CDATA[Los grupos de usuarios moderados y cerrados requieren al menos un líder.]]></item>
+		<item name="wcf.acp.group.leader.error.notFound"><![CDATA[No se puede encontrar {if $unknownLeader|count == 1}al usuario{else}a los usuarios{/if}:<ul class="inlineDataList">{foreach from=$unknownLeader item=username}<li>{$username}</li>{/foreach}</ul>.]]></item>
+		<item name="wcf.acp.group.moderatedUserGroup"><![CDATA[Grupo de usuarios moderado]]></item>
+	</category>
+	<category name="wcf.user.userGroups">
+		<item name="wcf.user.userGroups.join"><![CDATA[Unirse al grupo de usuarios]]></item>
+		<item name="wcf.user.userGroups.leave"><![CDATA[Abandonar el grupo de usuarios]]></item>
+		<item name="wcf.user.userGroups.leave.sure"><![CDATA[¿Realmente quieres abandonar el grupo <span class="confirmationObject">{$group->getTitle()}</span>?]]></item>
+		<item name="wcf.user.userGroups.apply"><![CDATA[Solicitud de membresía]]></item>
+		<item name="wcf.user.userGroups.apply.reason"><![CDATA[Motivo]]></item>
+		<item name="wcf.user.userGroups.apply.groupInformation"><![CDATA[Detalles del grupo de usuarios]]></item>
+		<item name="wcf.user.userGroups.apply.applicationInformation"><![CDATA[Detalles de la solicitud]]></item>
+		<item name="wcf.user.userGroups.application.comments.description"><![CDATA[Todos los comentarios son internos y no se expondrán a los solicitantes.]]></item>
+		<item name="wcf.user.userGroups.application.status"><![CDATA[Estado]]></item>
+		<item name="wcf.user.userGroups.application.status.status0"><![CDATA[Pendiente]]></item>
+		<item name="wcf.user.userGroups.application.status.status1"><![CDATA[En proceso]]></item>
+		<item name="wcf.user.userGroups.application.status.status2"><![CDATA[Aceptada]]></item>
+		<item name="wcf.user.userGroups.application.status.status3"><![CDATA[Denegada]]></item>
+		<item name="wcf.user.userGroups.application.status.status5"><![CDATA[Cerrada]]></item>
+		<item name="wcf.user.userGroups.application.time"><![CDATA[Último cambio]]></item>
+		<item name="wcf.user.userGroups.application.edit"><![CDATA[Editar solicitud]]></item>
+		<item name="wcf.user.userGroups.application.reply"><![CDATA[Responder]]></item>
+		<item name="wcf.user.userGroups.application.revoke"><![CDATA[Revocar solicitud]]></item>
+		<item name="wcf.user.userGroups.application.revoke.sure"><![CDATA[¿Realmente quieres revocar tu solicitud para el grupo de usuarios <span class="confirmationObject">{$group->getTitle()}</span>?]]></item>
+		<item name="wcf.user.userGroups.application.log"><![CDATA[Registro]]></item>
+		<item name="wcf.user.userGroups.application.log.action"><![CDATA[Acción]]></item>
+		<item name="wcf.user.userGroups.application.log.time"><![CDATA[Fecha]]></item>
+		<item name="wcf.user.userGroups.application.log.editReason"><![CDATA[Ha editado el motivo.]]></item>
+		<item name="wcf.user.userGroups.application.log.changeStatus"><![CDATA[Ha cambiado el estado a “{'wcf.user.userGroups.application.status.status'|concat:$additionalData[newStatus]|language}”.]]></item>
+		<item name="wcf.user.userGroups.application.log.editReply"><![CDATA[Ha editado la respuesta.]]></item>
+	</category>
+	<category name="wcf.user.moderatedUserGroups">
+		<item name="wcf.user.moderatedUserGroups.applications"><![CDATA[Solicitudes]]></item>
+		<item name="wcf.user.moderatedUserGroups.members"><![CDATA[Miembros]]></item>
+		<item name="wcf.user.moderatedUserGroups.members.kick"><![CDATA[Eliminar]]></item>
+		<item name="wcf.user.moderatedUserGroups.members.kick.sure"><![CDATA[¿Realmente quieres eliminar a <span class="confirmationObject">{$user->username}</span> de este grupo de usuarios?]]></item>
+		<item name="wcf.user.moderatedUserGroups.isMember"><![CDATA[Miembro]]></item>
+		<item name="wcf.user.moderatedUserGroups.members.add"><![CDATA[Añadir miembro]]></item>
+		<item name="wcf.user.moderatedUserGroups.members.add.error.notFound"><![CDATA[No se puede encontrar al usuario.]]></item>
+		<item name="wcf.user.moderatedUserGroups.members.add.error.alreadyMember"><![CDATA[Este usuario ya es miembro de este grupo de usuarios.]]></item>
+		<item name="wcf.user.moderatedUserGroups.noApplications"><![CDATA[No hay solicitudes pendientes en este momento.]]></item>
+	</category>
+	<category name="wcf.user.menu">
+		<item name="wcf.user.menu.userGroups"><![CDATA[Grupos de usuarios]]></item>
+		<item name="wcf.user.menu.accessibleUserGroups"><![CDATA[Grupos de usuarios]]></item>
+		<item name="wcf.user.menu.moderatedUserGroups"><![CDATA[Gestión de grupos de usuarios]]></item>
+	</category>
+	<category name="wcf.user.notification">
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application"><![CDATA[Grupos de usuarios moderados]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.created"><![CDATA[Notificarme nuevas solicitudes]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.created.title"><![CDATA[Nueva solicitud]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.created.message"><![CDATA[<strong>{$author}</strong> ha solicitado unirse al grupo de usuarios <strong>{$group}</strong>.]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.created.mail.plaintext"><![CDATA[{@$author} [URL:{@$author->getLink()}] ha solicitado unirse al grupo de usuarios “{@$group}” [URL:{@$application->getLink()}]:]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.created.mail.html"><![CDATA[<p><a href="{$author->getLink()}">{$author}</a> ha solicitado unirse al grupo de usuarios <a href="{$application->getLink()}">{$group}</a>:</p>]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.edited"><![CDATA[Notificarme actualizaciones de estados de solicitudes]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.edited.title"><![CDATA[Solicitud {if $newStatus == 'accepted'}aceptada{elseif $newStatus == 'rejected'}rechazada{else}cerrada{/if}]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.edited.message"><![CDATA[<strong>{$author}</strong> ha {if $newStatus == 'accepted'}aceptado{elseif $newStatus == 'rejected'}rechazado{else}cerrado{/if} tu solicitud para el grupo de usuarios <strong>{$group}</strong>.]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.edited.mail.plaintext"><![CDATA[{@$author} [URL:{@$author->getLink()}] ha {if $newStatus == 'accepted'}aceptado{elseif $newStatus == 'rejected'}rechazado{else}cerrado{/if} tu solicitud para el grupo de usuarios “{@$group}”:]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.edited.mail.html"><![CDATA[<p><a href="{$author->getLink()}">{$author}</a> ha {if $newStatus == 'accepted'}aceptado{elseif $newStatus == 'rejected'}rechazado{else}cerrado{/if} tu solicitud para el grupo de usuarios “{$group}”:</p>]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.notification.comment"><![CDATA[Notificarme cuando se escriban nuevos comentarios en solicitudes de grupos de usuarios]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.comment.mail.plaintext"><![CDATA[{@$authorList} ha comentado en la solicitud de {@$userGroupApplication->getUserProfile()} para el grupo de usuarios “{@$userGroupApplication->getGroup()}” [URL:{@$userGroupApplication->getLink()}#comment{@$commentID}]{if $count == 1 && !$guestTimesTriggered}:{else}.{/if}]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.comment.mail.html"><![CDATA[<p>{@$authorList} ha comentado en la solicitud de {$userGroupApplication->getUserProfile()} para el grupo de usuarios <a href="{$userGroupApplication->getLink()}#comment{@$commentID}">{$userGroupApplication->getGroup()}</a>:</p>]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.comment.message"><![CDATA[{if !$author->userID}Un invitado{else}<strong>{$author}</strong>{/if} ha comentado en la solicitud de <strong>{$userGroupApplication->getUserProfile()}</strong> para el grupo de usuarios <strong>{$userGroupApplication->getGroup()}</strong>.]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.comment.message.stacked"><![CDATA[{@'wcf.user.notification.stacked.authorList'|language} ha comentado en la solicitud de <strong>{$userGroupApplication->getUserProfile()}</strong> para el grupo de usuarios <strong>{$userGroupApplication->getGroup()}</strong>.]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.comment.title"><![CDATA[Nuevo comentario (Solicitud de grupo de usuarios)]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.comment.title.stacked"><![CDATA[{#$timesTriggered} nuevos comentarios (Solicitud de grupo de usuarios)]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.response.notification.commentResponse"><![CDATA[Notificarme cuando se escriban nuevas respuestas a comentarios de solicitudes de grupos de usuarios]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.commentResponse.mail.plaintext"><![CDATA[{@$authorList} ha respondido al comentario de {@$commentAuthor} en la solicitud de {@$userGroupApplication->getUserProfile()} para el grupo de usuarios “{@$userGroupApplication->getGroup()}” [URL:{@$userGroupApplication->getLink()}#comment{@$commentID}/response{@$responseID}]{if $count == 1 && !$guestTimesTriggered}:{else}.{/if}]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.commentResponse.mail.html"><![CDATA[<p>{@$authorList} ha respondido al comentario de {$commentAuthor} en la solicitud de {$userGroupApplication->getUserProfile()} para el grupo de usuarios <a href="{$userGroupApplication->getLink()}#comment{@$commentID}/response{@$responseID}">{$userGroupApplication->getGroup()}</a>:</p>]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.commentResponse.message"><![CDATA[{if $author->userID}<strong>{$author}</strong>{else}Un invitado{/if} ha respondido al comentario de <strong>{$commentAuthor}</strong> en la solicitud de <strong>{$userGroupApplication->getUserProfile()}</strong> para el grupo de usuarios <strong>{$userGroupApplication->getGroup()}</strong>.]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.commentResponse.message.stacked"><![CDATA[{@'wcf.user.notification.stacked.authorList'|language} ha respondido al comentarios en la solicitud de <strong>{$userGroupApplication->getUserProfile()}</strong> para el grupo de usuarios <strong>{$userGroupApplication->getGroup()}</strong>.]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.commentResponse.title"><![CDATA[Nueva respuesta (Solicitud de grupo de usuarios)]]></item>
+		<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.commentResponse.title.stacked"><![CDATA[{#$timesTriggered} nuevas respuestas (Solicitud de grupo de usuarios)]]></item>
+	</category>
+</import>
+<delete>
+	<item name="wcf.acp.group.description"/>
+	<item name="wcf.acp.group.description.description"/>
+	<item name="wcf.page.category.com.woltlab.wcf.moderatedUserGroup"/>
+	<item name="wcf.page.com.woltlab.wcf.moderatedUserGroup.ModeratedUserGroupListPage"/>
+	<item name="wcf.page.com.woltlab.wcf.moderatedUserGroup.UserGroupApplicationEditForm"/>
+	<item name="wcf.page.com.woltlab.wcf.moderatedUserGroup.UserGroupApplyForm"/>
+	<item name="wcf.page.com.woltlab.wcf.moderatedUserGroup.UserGroupListPage"/>
+	<item name="wcf.page.com.woltlab.wcf.moderatedUserGroup.UserGroupManageApplicationEditForm"/>
+	<item name="wcf.page.com.woltlab.wcf.moderatedUserGroup.UserGroupManageApplicationListPage"/>
+	<item name="wcf.page.com.woltlab.wcf.moderatedUserGroup.UserGroupManageMemberListPage"/>
+	<item name="wcf.user.moderatedUserGroups"/>
+	<item name="wcf.user.moderatedUserGroups.members.add.description"/>
+	<item name="wcf.user.moderatedUserGroups.members.add.success"/>
+	<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.comment.mail"/>
+	<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.comment.mail.stacked"/>
+	<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.commentResponse.mail"/>
+	<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.commentResponse.mail.stacked"/>
+	<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.created.mail"/>
+	<item name="wcf.user.notification.com.woltlab.wcf.moderatedUserGroup.application.edited.mail"/>
+	<item name="wcf.user.userGroups"/>
+</delete>
+</language>
