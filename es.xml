@@ -38,8 +38,8 @@
 		<item name="wcf.user.userGroups.application.time"><![CDATA[Último cambio]]></item>
 		<item name="wcf.user.userGroups.application.edit"><![CDATA[Editar solicitud]]></item>
 		<item name="wcf.user.userGroups.application.reply"><![CDATA[Responder]]></item>
-		<item name="wcf.user.userGroups.application.revoke"><![CDATA[Revocar solicitud]]></item>
-		<item name="wcf.user.userGroups.application.revoke.sure"><![CDATA[¿Realmente quieres revocar tu solicitud para el grupo de usuarios <span class="confirmationObject">{$group->getTitle()}</span>?]]></item>
+		<item name="wcf.user.userGroups.application.revoke"><![CDATA[Cancelar solicitud]]></item>
+		<item name="wcf.user.userGroups.application.revoke.sure"><![CDATA[¿Realmente quieres cancelar tu solicitud para el grupo de usuarios <span class="confirmationObject">{$group->getTitle()}</span>?]]></item>
 		<item name="wcf.user.userGroups.application.log"><![CDATA[Registro]]></item>
 		<item name="wcf.user.userGroups.application.log.action"><![CDATA[Acción]]></item>
 		<item name="wcf.user.userGroups.application.log.time"><![CDATA[Fecha]]></item>
