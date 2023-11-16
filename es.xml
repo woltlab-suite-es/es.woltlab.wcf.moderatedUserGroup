@@ -28,7 +28,7 @@
 		<item name="wcf.user.userGroups.apply.reason"><![CDATA[Motivo]]></item>
 		<item name="wcf.user.userGroups.apply.groupInformation"><![CDATA[Detalles del grupo de usuarios]]></item>
 		<item name="wcf.user.userGroups.apply.applicationInformation"><![CDATA[Detalles de la solicitud]]></item>
-		<item name="wcf.user.userGroups.application.comments.description"><![CDATA[Todos los comentarios son internos y no se expondrán a los solicitantes.]]></item>
+		<item name="wcf.user.userGroups.application.comments.description"><![CDATA[Todos los comentarios son internos y no serán visibles para los solicitantes.]]></item>
 		<item name="wcf.user.userGroups.application.status"><![CDATA[Estado]]></item>
 		<item name="wcf.user.userGroups.application.status.status0"><![CDATA[Pendiente]]></item>
 		<item name="wcf.user.userGroups.application.status.status1"><![CDATA[En proceso]]></item>
