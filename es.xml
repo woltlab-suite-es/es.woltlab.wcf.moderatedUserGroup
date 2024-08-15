@@ -9,7 +9,7 @@
 		<item name="wcf.acp.group.groupType.type7"><![CDATA[Cerrado moderado]]></item>
 		<item name="wcf.acp.group.groupType.description"><![CDATA[Selecciona el tipo de grupo de usuarios:
 <ul class="nativeList">
-	<li>Cerrado: Sólo los administradores pueden añadir miembros.</li>
+	<li>Cerrado: Solo los administradores pueden añadir miembros.</li>
 	<li>Abierto: Todos los usuarios pueden unirse o abandonarlo en cualquier momento.</li>
 	<li>Moderado: Los usuarios deben solicitar unirse, pero pueden salirse en cualquier momento.</li>
 	<li>Cerrado moderado: Los usuarios deben solicitar unirse, pero no pueden salirse en cualquier momento.</li>
